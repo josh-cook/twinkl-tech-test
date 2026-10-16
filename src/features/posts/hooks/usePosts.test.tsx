@@ -42,9 +42,10 @@ describe("usePosts", () => {
 
     await result.current.removePost(1);
 
+    expect(postsApi.deletePost).toHaveBeenCalledWith(1);
+
     await waitFor(() => {
-      expect(postsApi.deletePost).toHaveBeenCalledWith(1);
+      expect(result.current.posts).toEqual([]);
     });
-    expect(result.current.posts).toEqual([]);
   });
 });

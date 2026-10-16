@@ -5,7 +5,7 @@ import { useCallback, useEffect, useState } from "react";
 interface UsePostsResult {
   posts: Post[];
   error: string | null;
-  removePost: (id: number) => void;
+  removePost: (id: number) => Promise<void>;
   refetch: () => void;
 }
 
