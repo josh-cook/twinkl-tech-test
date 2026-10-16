@@ -1,4 +1,4 @@
-import { act, renderHook, waitFor } from "@testing-library/react";
+import { renderHook, waitFor } from "@testing-library/react";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import * as postsApi from "../../../service";
 import type { Post } from "../types";
@@ -40,9 +40,11 @@ describe("usePosts", () => {
     const { result } = renderHook(() => usePosts());
     await waitFor(() => expect(result.current.posts).toEqual(posts));
 
-    await act(async () => result.current.removePost(1));
+    await result.current.removePost(1);
 
-    expect(postsApi.deletePost).toHaveBeenCalledWith(1);
+    await waitFor(() => {
+      expect(postsApi.deletePost).toHaveBeenCalledWith(1);
+    });
     expect(result.current.posts).toEqual([]);
   });
 });
