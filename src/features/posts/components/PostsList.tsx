@@ -1,5 +1,6 @@
 import { Post } from "@/features/posts";
 import PostItem from "@/features/posts/components/PostItem";
+import "./PostsList.css";
 
 interface PostsListProps {
   posts: Post[];

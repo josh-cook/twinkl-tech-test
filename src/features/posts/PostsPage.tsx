@@ -22,8 +22,6 @@ export default function PostsPage() {
 
   return (
     <div className={"posts-page"}>
-      <h1 className={"posts-page-title"}>Posts</h1>
-
       <PostsSearch value={search} onChange={setSearch} />
 
       <PostsList posts={results} onRemove={removePost} />

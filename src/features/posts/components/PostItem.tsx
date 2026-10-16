@@ -1,4 +1,5 @@
 import { Post } from "@/features/posts";
+import "./PostItem.css";
 
 interface PostItemProps {
   post: Post;
@@ -8,8 +9,10 @@ interface PostItemProps {
 export default function PostItem({ post, onRemove }: PostItemProps) {
   return (
     <div className={"post-item"}>
-      <h2 className={"post-title"}>{post.title}</h2>
-      <p className={"post-body"}>{post.body}</p>
+      <div className={"post-content"}>
+        <h2 className={"post-title"}>{post.title}</h2>
+        <p className={"post-body"}>{post.body}</p>
+      </div>
 
       <button className={"remove-button"} onClick={() => onRemove(post.id)}>
         Remove Post

@@ -2,6 +2,9 @@
   width: 1080px;
   margin: 0 auto;
   padding: 24px;
+  background-color: var(--twinkl-blue);
+  color: var(--text);
+  border-radius: 8px;
 }
 
 .posts-page-title {
