@@ -21,8 +21,7 @@ describe("usePosts", () => {
 
     const { result } = renderHook(() => usePosts());
 
-    await waitFor(() => expect(result.current.loading).toBe(false));
-    expect(result.current.posts).toEqual(posts);
+    await waitFor(() => expect(result.current.posts).toEqual(posts));
     expect(result.current.error).toBeNull();
   });
 
@@ -32,7 +31,6 @@ describe("usePosts", () => {
     const { result } = renderHook(() => usePosts());
 
     await waitFor(() => expect(result.current.error).toBe("Network error"));
-    expect(result.current.loading).toBe(false);
   });
 
   it("removes a post after the API call succeeds", async () => {

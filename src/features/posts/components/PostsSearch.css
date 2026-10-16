@@ -1,6 +1,14 @@
 .posts-search {
   display: flex;
   width: 50%;
-  justify-self: anchor-center;
+  justify-self: center;
   height: 30px;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .posts-search {
+    width: 100%;
+    height: 30px;
+  }
 }

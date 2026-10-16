@@ -19,7 +19,6 @@ describe("PostsPage", () => {
     vi.clearAllMocks();
     vi.mocked(usePosts).mockReturnValue({
       posts,
-      loading: false,
       error: null,
       removePost,
       refetch: vi.fn(),

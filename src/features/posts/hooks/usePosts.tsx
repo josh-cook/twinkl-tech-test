@@ -4,7 +4,6 @@ import { useCallback, useEffect, useState } from "react";
 
 interface UsePostsResult {
   posts: Post[];
-  loading: boolean;
   error: string | null;
   removePost: (id: number) => void;
   refetch: () => void;
@@ -12,11 +11,9 @@ interface UsePostsResult {
 
 export default function usePosts(): UsePostsResult {
   const [posts, setPosts] = useState<Post[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
   const refetch = useCallback(async () => {
-    setLoading(true);
     setError(null);
 
     try {
@@ -24,8 +21,6 @@ export default function usePosts(): UsePostsResult {
       setPosts(data);
     } catch (err) {
       setError((err as Error).message);
-    } finally {
-      setLoading(false);
     }
   }, []);
 
@@ -45,5 +40,5 @@ export default function usePosts(): UsePostsResult {
     }
   };
 
-  return { posts, loading, error, removePost, refetch };
+  return { posts, error, removePost, refetch };
 }

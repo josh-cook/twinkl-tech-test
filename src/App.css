@@ -1,17 +1,17 @@
 :root {
-    --twinkl-blue: #2196f3;
-    --twinkl-light-blue: #eaf6ff;
-    --twinkl-cloud-white: #f4f4f4;
-    --twinkl-star-pink: #d91c79;
+  --twinkl-blue: #2196f3;
+  --twinkl-light-blue: #eaf6ff;
+  --twinkl-cloud-white: #f4f4f4;
+  --twinkl-star-pink: #d91c79;
 }
 
 body {
-    font-family: "Sulphur Point", sans-serif;
+  font-family: "Sulphur Point", sans-serif;
 }
 
 button,
 input,
 textarea,
 select {
-    font: inherit;
+  font: inherit;
 }
