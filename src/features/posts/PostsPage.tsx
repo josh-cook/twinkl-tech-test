@@ -2,6 +2,7 @@ import PostsSearch from "@/features/posts/components/PostsSearch.tsx";
 import PostsList from "@/features/posts/components/PostsList.tsx";
 import { useMemo, useState } from "react";
 import usePosts from "@/features/posts/hooks/usePosts.tsx";
+import "./PostsPage.css";
 
 export default function PostsPage() {
   const [search, setSearch] = useState("");
@@ -20,8 +21,8 @@ export default function PostsPage() {
   }, [posts, search]);
 
   return (
-    <div>
-      <h1>Posts</h1>
+    <div className={"posts-page"}>
+      <h1 className={"posts-page-title"}>Posts</h1>
 
       <PostsSearch value={search} onChange={setSearch} />
 

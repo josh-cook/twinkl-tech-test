@@ -41,7 +41,7 @@ export default function usePosts(): UsePostsResult {
 
       setPosts((currentPosts) => currentPosts.filter((post) => post.id !== id));
     } catch {
-      setError("Failed to delete post. Please try again.");
+      setError("Removing the post has failed, try again please :)");
     }
   };
 
