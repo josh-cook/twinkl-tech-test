@@ -1,3 +1,5 @@
+[![CI](https://github.com/josh-cook/twinkl-tech-test/actions/workflows/ci.yml/badge.svg)](https://github.com/josh-cook/twinkl-tech-test/actions/workflows/ci.yml)
+
 # Twinkl React Tech Test
 
 ## Task description
