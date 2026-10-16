@@ -1,6 +1,6 @@
 .posts-search {
-    display: flex;
-    width: 50%;
-    justify-self: anchor-center;
-    height: 30px;
+  display: flex;
+  width: 50%;
+  justify-self: anchor-center;
+  height: 30px;
 }
